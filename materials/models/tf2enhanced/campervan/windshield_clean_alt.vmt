@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\tf2enhanced\campervan/glass"
+	"$surfaceprop"	"default"
+	
+	"$bumpmap"	"models\tf2enhanced\normal"
+	
+	"$ambientocclusion" "1"
+	"$phong"	"1"
+	"$phongboost"	"1"
+	"$phongexponent" "8"
+	"$phongfresnelranges"	"[.1 1 2]"
+	//"$rimlight"	"1"
+	//"$rimlightexponent"	"1"
+
+	"$cloakPassEnabled" 		"1"
+
+	"$nocull" "1"
+
+
+}

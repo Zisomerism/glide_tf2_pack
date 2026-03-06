@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\tf2enhanced\campervan/wheels"
+	"$surfaceprop"	"default"
+	"$bumpmap"	"models\tf2enhanced\campervan/wheels_normal"
+	
+	//phong properties
+	"$phong"	"1"
+	"$phongboost"	"[.5]"
+	"$phongexponenttexture"	"models\tf2enhanced\campervan/wheels_exp"
+	"$phongfresnelranges"	"[1 2 5]"
+	//"$lightwarptexture" "models\tf2enhanced/pickup_lightwarp"
+	//"$rimlight"	"1"
+	//"$rimlightexponent"	"1"
+
+	"$cloakPassEnabled" 		"1"
+
+	"$nocull" "1"
+
+}

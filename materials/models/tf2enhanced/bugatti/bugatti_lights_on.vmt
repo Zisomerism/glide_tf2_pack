@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tf2enhanced\bugatti/bugatti"
+	"$bumpmap" "models\tf2enhanced\bugatti/bugatti_normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" 1
+
+	"$phong" "3"
+	"$phongexponent" "30"
+	"$phongboost" "10"
+	"$lightwarptexture" "models\tf2enhanced/pickup_lightwarp"
+
+	"$phongfresnelranges"	"[.25 .5 1]"
+
+	"$emissiveBlendEnabled" "1"
+	"$emissiveBlendTexture" "dev/null"
+	"$emissiveBlendBaseTexture" "models\tf2enhanced\bugatti/bugatti"
+	"$emissiveBlendFlowTexture" "dev/null"
+	"$emissiveBlendTint" "[7 10 10]"
+	"$emissiveBlendStrength" "1"
+	"$emissiveBlendScrollVector" "[0.0]"
+}

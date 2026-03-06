@@ -9,7 +9,9 @@ ENT.GlideCategory = "tf2desu"
 ENT.ChassisModel = "models/tf2enhanced/nuva.mdl"
 
 if CLIENT then
-    ENT.CameraOffset = Vector( -270, 0, 50 )
+    ENT.CameraOffset = Vector( -340, 0, 50 )
+
+    ENT.HornSound = "glide/horns/car_horn_med_1.wav"
 
     ENT.ExhaustOffsets = {
         { pos = Vector( -108, 25.5, -2 ), angle = Angle( -20, -14, 0 ) },
@@ -17,11 +19,11 @@ if CLIENT then
     }
 
     ENT.EngineSmokeStrips = {
-        { offset = Vector( 108, 0, -2 ), angle = Angle(), width = 40 }
+        { offset = Vector( 108, 0, 15 ), angle = Angle(), width = 40 }
     }
 
     ENT.EngineFireOffsets = {
-        { offset = Vector( 75, 0, 5 ), angle = Angle() }
+        { offset = Vector( 48, 0, 25 ), angle = Angle() }
     }
 
     ENT.Headlights = {
@@ -48,11 +50,13 @@ end
 
 if SERVER then
     ENT.SpawnPositionOffset = Vector( 0, 0, 40 )
+    ENT.AngularDrag = Vector( -0.5, -0.5, -5 )
 
     function ENT:InitializePhysics()
         self:SetSolid( SOLID_VPHYSICS )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:PhysicsInit( SOLID_VPHYSICS, Vector( 0, 0, 0 ) )
+        self:SetSkin( math.random( 0, self:SkinCount() - 2 ) )
     end
 
     ENT.LightBodygroups = {
@@ -60,6 +64,10 @@ if SERVER then
     }
 
     function ENT:CreateFeatures()
+        self:SetSuspensionLength( 12 )
+        self:SetSpringStrength( 300 )
+        self:SetSpringDamper( 1800 )
+
         self:CreateSeat( Vector( -26, 22, 0 ), Angle( 0, 270, -5 ), Vector( 40, 80, 0 ), true )
         self:CreateSeat( Vector( -8, -20, 0 ), Angle( 0, 270, 5 ), Vector( -40, -80, 0 ), true )
 

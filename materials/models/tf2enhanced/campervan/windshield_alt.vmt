@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\tf2enhanced\campervan/windshield"
+	"$surfaceprop"	"default"
+	
+	"$bumpmap"	"models\tf2enhanced\campervan/windshield_normal"
+	
+	"$ambientocclusion" "1"
+	"$phong"	"1"
+	"$phongboost"	"10"
+	"$phongexponent" "8"
+	"$phongfresnelranges"	"[.1 1 2]"
+	//"$rimlight"	"1"
+	//"$rimlightexponent"	"1"
+
+	"$cloakPassEnabled" 		"1"
+
+	"$nocull" "1"
+
+
+}

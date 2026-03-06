@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\tf2enhanced\campervan/body_bumper_front_clean_alt"
+	"$bumpmap"	"models\tf2enhanced\campervan/body_normal"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.5 .5 .5]"
+	
+	//"$basemapalphaphongmask" "1"
+	"$phong" "1"
+	"$phongexponenttexture" "models\tf2enhanced\campervan/body_exp"
+	"$phongboost" ".5"	
+	//"$lightwarptexture" "models\tf2enhanceds/pickup_lightwarp"
+	"$phongfresnelranges"	"[1 1.5 1]"
+
+	"$cloakPassEnabled" 		"1"
+
+	"$nocull" "1"
+
+}
