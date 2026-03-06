@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tf2enhanced\laika/fari"
+	"$bumpmap"	"models\tf2enhanced\normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" 1
+    //"$envmap" "models\tf2enhanced\laika/cubemap_sheen001.hdr"
+	"$envmaptint" "[.6 .6 .6]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "5"
+	"$rimlightboost" "2"
+}

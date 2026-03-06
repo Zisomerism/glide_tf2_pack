@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tf2enhanced\laika/deflector"
+	"$bumpmap"	"models\tf2enhanced\normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" 1
+	"$phong" "1"
+	"$phongboost" ".5"	
+	"$phongfresnelranges"	"[1 1.5 1]"
+}

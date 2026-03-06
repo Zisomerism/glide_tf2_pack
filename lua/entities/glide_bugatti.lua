@@ -78,12 +78,26 @@ if SERVER then
         { type = "headlight", bodyGroupId = 2, subModelId = 1 } -- Headlights
     }
 
+    function ENT:GetGears()
+        return {
+            [-1] = 2.5, -- Reverse
+            [0] = 0, -- Neutral (this number has no effect)
+            [1] = 3,
+            [2] = 1.5,
+            [3] = 1.0,
+            [4] = 0.8
+        }
+    end
+
     function ENT:CreateFeatures()
         self:SetSuspensionLength( 12 )
         self:SetSpringDamper( 1900 )
 
         self:SetCounterSteer( 0.8 )
         self:SetForwardTractionMax( 2200 )
+        self:SetSideTractionMin( 950 )
+        --self:SetSideTractionMaxAng( 180 )
+        self:SetBrakePower( 2800 )
 
         self:SetMinRPM( 200 )
         self:SetMaxRPM( 4500 )
@@ -91,6 +105,7 @@ if SERVER then
         self:SetMinRPMTorque( 3800 )
         self:SetMaxRPMTorque( 4100 )
 
+        self:SetDifferentialRatio( 0.35 )
         self:SetPowerDistribution( -1 )
         self:SetTransmissionEfficiency( 1 )
 

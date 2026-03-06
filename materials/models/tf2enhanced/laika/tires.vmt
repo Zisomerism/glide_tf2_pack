@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tf2enhanced\laika/tires"
+	"$bumpmap"	"models\tf2enhanced\laika/tires_normal"
+	"$envmaptint" "[.5 .5 .5]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "5"
+	"$rimlightboost" "2"
+	
+	"$basemapalphaphongmask"	"1"
+	
+	"$phong" "1"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" 1
+}

@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tf2enhanced\laika/glass_out"
+	"$bumpmap"	"models\tf2enhanced\normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" 0
+    "$envmap" "models\tf2enhanced\laika/cubemap_sheen001.hdr"
+    "$envmaptint" "[.4 .4 .4]"
+}

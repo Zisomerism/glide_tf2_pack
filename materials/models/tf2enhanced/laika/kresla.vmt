@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tf2enhanced\laika/kresla"
+	"$bumpmap"	"models\tf2enhanced\normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" 1
+    //"$envmap" "models\tf2enhanced\laika/cubemap_sheen001.hdr"
+	"$envmaptint" "[.5 .5 .5]"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "5"
+	"$rimlightboost" "2"
+	
+	"$basemapalphaphongmask"	"1"
+	
+	"$phong" "1"
+
+}

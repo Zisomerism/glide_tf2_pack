@@ -56,7 +56,7 @@ if CLIENT then
     }
 
     function ENT:OnCreateEngineStream( stream )
-        stream:LoadPreset( "speedo" )
+        stream:LoadPreset( "insurgent" )
     end
 
     local POSE_DATA = {
@@ -91,10 +91,20 @@ if SERVER then
 
     ENT.LightBodygroups = {
         { type = "headlight", bodyGroupId = 7, subModelId = 1 }, -- Headlights
-        { type = "headlight", bodyGroupId = 8, subModelId = 1 },
 
         { type = "brake_or_taillight", bodyGroupId = 15, subModelId = 1 },
     }
+
+    function ENT:GetGears()
+        return {
+            [-1] = 2.5, -- Reverse
+            [0] = 0, -- Neutral (this number has no effect)
+            [1] = 4,
+            [2] = 1.7,
+            [3] = 1.2,
+            [4] = 0.9
+        }
+    end
 
     function ENT:CreateFeatures()
         self.switchBaseDelay = 0.5
@@ -105,8 +115,16 @@ if SERVER then
 
         self:SetBrakePower( 2000 )
 
-        self:SetForwardTractionMax( 2800 )
+        self:SetForwardTractionMax( 3000 )
+        self:SetSideTractionMax( 2600 )
+        self:SetSideTractionMin( 1000 )
 
+        self:SetMaxRPM( 5500 )
+
+        self:SetMinRPMTorque( 4000 )
+        self:SetMaxRPMTorque( 4200 )
+
+        self:SetDifferentialRatio( 0.65 )
         self:SetPowerDistribution( -0.4 )
 
         self:CreateSeat( Vector( 10, 20, 12 ), Angle( 0, 270, -5 ), Vector( 40, 80, 0 ), true )
