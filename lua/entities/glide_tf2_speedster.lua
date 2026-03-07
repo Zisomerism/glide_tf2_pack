@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 ENT.Type = "anim"
 ENT.Base = "base_glide_car"
-ENT.PrintName = "Bugatti"
+ENT.PrintName = "Speedster"
 ENT.Author = "desu"
 
 ENT.GlideCategory = "tf2desu"

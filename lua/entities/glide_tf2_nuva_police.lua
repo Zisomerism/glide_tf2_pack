@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type = "anim"
-ENT.Base = "glide_nuva"
+ENT.Base = "glide_tf2_nuva"
 ENT.PrintName = "Nuva Highway Patrol"
 ENT.Author = "desu"
 
