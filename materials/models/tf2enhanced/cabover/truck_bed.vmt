@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	 "models\tf2enhanced\cabover/truck_bed_red"
+	"$bumpmap"	"models\tf2enhanced\normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" "1"
+}

@@ -10,6 +10,10 @@ ENT.ChassisModel = "models/tf2enhanced/nuva.mdl"
 ENT.CanSwitchSiren = true
 
 if CLIENT then
+
+    ENT.SirenLoopSound = ")glide/alarms/police_siren_1.wav"
+    ENT.SirenLoopAltSound = ")glide/horns/police_horn_1.wav"
+
     ENT.SirenLights = {
         -- Top-right (blue) lights
         { offset = Vector( -12, -26, 64 ), dir = Vector( 0.6, 0, 0 ), time = 0.5, duration = 0.3, color = Glide.DEFAULT_SIREN_COLOR_B },

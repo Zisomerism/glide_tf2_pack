@@ -8,10 +8,12 @@ ENT.Author = "desu"
 ENT.GlideCategory = "tf2desu"
 ENT.ChassisModel = "models/tf2enhanced/bugatti.mdl"
 
+DEFINE_BASECLASS( "base_glide_car" )
+
 if CLIENT then
     ENT.CameraOffset = Vector( -220, 0, 60 )
 
-    ENT.HornSound = "glide/horns/car_horn_med_3.wav"
+    ENT.HornSound = "glide/horns/car_horn_med_8.wav"
 
     ENT.ExhaustOffsets = {
         { pos = Vector( -76, -5.5, 2 ), angle = Angle( 0, 0, 0 ) }
@@ -40,9 +42,6 @@ if CLIENT then
     end
 
     local POSE_DATA = {
-        --["ValveBiped.Bip01_R_Thigh"] = Angle( 0, 90, 0 ),
-        --["ValveBiped.Bip01_L_Thigh"] = Angle( 0, 90, 0 ),
-
         ["ValveBiped.Bip01_R_Calf"] = Angle( 0, -30, 0 ),
         ["ValveBiped.Bip01_L_Calf"] = Angle( 0, -30, 0 ),
 
@@ -61,6 +60,24 @@ if CLIENT then
             return POSE_DATA
         end
     end
+
+    function ENT:OnActivateMisc()
+        BaseClass.OnActivateMisc( self )
+
+        self.steerWheeleId = self:LookupBone( "steer" )
+    end
+
+    local steerAngle = Angle()
+
+    function ENT:OnUpdateAnimations()
+        BaseClass.OnUpdateAnimations( self )
+
+        if not self.steerWheeleId then return end
+        local steer = self:GetSteering() * -80
+        steerAngle[1] = steer
+        self:ManipulateBoneAngles( self.steerWheeleId, steerAngle )
+    end
+
 end
 
 if SERVER then
@@ -110,7 +127,6 @@ if SERVER then
         self:SetTransmissionEfficiency( 1 )
 
         self:CreateSeat( Vector( -34, -5, -6 ), Angle( 0, 270, -5 ), Vector( 40, 80, 0 ), true )
-        self:CreateSeat( Vector( -8, -20, 0 ), Angle( 0, 270, 5 ), Vector( -40, -80, 0 ), true )
 
         -- Front left
         self:CreateWheel( Vector( 65, 28.5, 10 ), {

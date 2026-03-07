@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\tf2enhanced\valvo/wagon_blackprts"
+	"$bumpmap"	"models\tf2enhanced\normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" "1"
+}

@@ -24,7 +24,7 @@ end
 if CLIENT then
     ENT.CameraOffset = Vector( -400, 0, 120 )
 
-    ENT.HornSound = "glide/horns/car_horn_med_1.wav"
+    ENT.HornSound = "glide/horns/car_horn_med_4.wav"
 
     ENT.ExhaustOffsets = {
         { pos = Vector( -115, 16, -6 ), angle = Angle( 0, 0, 0 ) }
@@ -74,6 +74,23 @@ if CLIENT then
         if seatIndex == 6 then
             return POSE_DATA
         end
+    end
+
+    function ENT:OnActivateMisc()
+        BaseClass.OnActivateMisc( self )
+
+        self.steerWheeleId = self:LookupBone( "steer" )
+    end
+
+    local steerAngle = Angle()
+
+    function ENT:OnUpdateAnimations()
+        BaseClass.OnUpdateAnimations( self )
+
+        if not self.steerWheeleId then return end
+        local steer = self:GetSteering() * 160
+        steerAngle[1] = steer
+        self:ManipulateBoneAngles( self.steerWheeleId, steerAngle )
     end
 
 end

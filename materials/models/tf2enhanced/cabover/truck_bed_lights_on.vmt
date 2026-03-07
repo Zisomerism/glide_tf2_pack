@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	 "models\tf2enhanced\cabover/truck_bed_red"
+	"$bumpmap"	"models\tf2enhanced\normal"
+
+	"$cloakPassEnabled" "1"
+	"$nocull" "1"
+
+
+
+	"$emissiveBlendEnabled" "1"
+	"$emissiveBlendTexture" "dev/null"
+	"$emissiveBlendBaseTexture" "models\tf2enhanced\cabover/truck_bed_red"
+	"$emissiveBlendFlowTexture" "dev/null"
+	"$emissiveBlendTint" "[7 10 10]"
+	"$emissiveBlendStrength" "1"
+	"$emissiveBlendScrollVector" "[0.0]"
+
+}
