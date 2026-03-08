@@ -10,6 +10,12 @@ ENT.ChassisModel = "models/tf2enhanced/cabover.mdl"
 
 DEFINE_BASECLASS( "base_glide_car" )
 
+function ENT:GetFirstPersonOffset( _, localEyePos )
+    localEyePos[3] = localEyePos[3] + 10
+
+    return localEyePos
+end
+
 if CLIENT then
     ENT.CameraOffset = Vector( -500, 0, 120 )
 
