@@ -135,20 +135,21 @@ if SERVER then
 
         self:SetSideTractionMultiplier( 90 )
         self:SetForwardTractionMax( 6000 )
+        self:SetForwardTractionBias( 0.25 )
         self:SetSideTractionMax( 4000 )
         self:SetSideTractionMin( 5500 )
 
         self:SetDifferentialRatio( 0.3 )
-        self:SetPowerDistribution( -0.7 )
+        self:SetPowerDistribution( -0.25 )
 
-        self:SetMinRPM( 600 )
-        self:SetMaxRPM( 4500 )
+        self:SetMinRPM( 500 )
+        self:SetMaxRPM( 4000 )
         self:SetMinRPMTorque( 6000 )
         self:SetMaxRPMTorque( 7000 )
 
         self:SetBrakePower( 6000 )
-        self:SetMaxSteerAngle( 40 )
-        self:SetSteerConeMaxSpeed( 800 )
+        self:SetMaxSteerAngle( 45 )
+        self:SetSteerConeMaxSpeed( 600 )
         self:SetSteerConeMaxAngle( 0.4 )
         self:SetCounterSteer( 0.2 )
 
